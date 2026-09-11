@@ -1,0 +1,1018 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   DEFAULT BLUE / WHITE THEME
+========================================= */
+
+:root {
+    --bg: #f5f8fc;
+    --sidebar: #1e3a5f;
+    --sidebar-hover: #294d78;
+
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --white: #ffffff;
+    --card: #ffffff;
+
+    --border: #dbe3ef;
+
+    --input-bg: #f8fafc;
+
+    --success: #16a34a;
+    --danger: #dc2626;
+
+    --shadow:
+        0 8px 25px rgba(30, 58, 95, 0.08);
+}
+
+
+/* =========================================
+   BEIGE THEME
+========================================= */
+
+body.beige-theme {
+    --bg: #e8e0d5;
+    --sidebar: #332b25;
+    --sidebar-hover: #463b32;
+
+    --primary: #8f633f;
+    --primary-dark: #754f34;
+
+    --text: #2f2924;
+    --muted: #756b61;
+
+    --white: #f8f3eb;
+    --card: #f8f3eb;
+
+    --border: #d4c8ba;
+
+    --input-bg: #eee7dd;
+
+    --shadow:
+        0 8px 25px rgba(55, 43, 32, 0.12);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 250px;
+
+    min-height: 100vh;
+
+    background: var(--sidebar);
+
+    color: white;
+
+    padding: 28px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 10px 30px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.brand h2 {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.brand span {
+    display: block;
+
+    color: #aaa099;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+    margin-top: 30px;
+}
+
+
+.nav-title {
+    color: #847a72;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    padding: 0 12px;
+
+    margin-bottom: 10px;
+}
+
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    margin-bottom: 5px;
+
+    border-radius: 7px;
+
+    color: #b6aca3;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-item:hover {
+    background: var(--sidebar-hover);
+
+    color: white;
+}
+
+
+/* Always BLUE */
+
+.nav-item.active {
+    background: rgba(37, 99, 235, 0.14);
+
+    color: #60a5fa;
+}
+
+
+.nav-icon {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SIDEBAR FOOTER
+========================================= */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    width: 100%;
+
+    padding: 15px 10px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    display: block;
+}
+
+
+.developer-credit {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+}
+
+
+.developer-credit .star {
+    color: #fbbf24;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    padding: 35px 40px;
+
+    max-width: 1600px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+
+.topbar h1 {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    color: var(--text);
+}
+
+
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.theme-btn:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(200px, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.stat-label {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+
+.stat-content strong {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+
+/* Always BLUE */
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+
+    background: rgba(37, 99, 235, 0.12);
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+
+/* Always GREEN */
+
+.status-text {
+    color: #16a34a !important;
+}
+
+
+.status-indicator {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+
+    background: rgba(22, 163, 74, 0.12);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.status-indicator span {
+    width: 9px;
+    height: 9px;
+
+    background: #16a34a;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 350px)
+        minmax(500px, 1fr);
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   PANELS
+========================================= */
+
+.panel {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.form-panel,
+.students-panel {
+    padding: 23px;
+}
+
+
+/* =========================================
+   PANEL HEADER
+========================================= */
+
+.panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.panel-header h2 {
+    font-size: 17px;
+
+    font-weight: 650;
+
+    color: var(--text);
+}
+
+
+.panel-header p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+.panel-number {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+    margin-bottom: 7px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    background: var(--input-bg);
+
+    color: var(--text);
+
+    border-radius: 7px;
+
+    padding: 11px 12px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.3s ease;
+}
+
+
+input {
+    height: 42px;
+}
+
+
+textarea {
+    height: 95px;
+
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted);
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================
+   ADD BUTTON
+   Always BLUE
+========================================= */
+
+.primary-btn {
+    width: 100%;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.primary-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+.primary-btn span {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   STUDENT LIST
+========================================= */
+
+#studentList {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   STUDENT CARD
+========================================= */
+
+.student-card {
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 17px;
+
+    background: var(--card);
+
+    position: relative;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.student-card:hover {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 8px 20px rgba(55, 43, 32, 0.08);
+
+    transform: translateY(-2px);
+}
+
+
+.student-card p {
+    margin: 0 0 9px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.student-card p:first-child {
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+
+.student-card strong {
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.edit-btn,
+.delete-btn {
+    flex: 1;
+
+    height: 34px;
+
+    border-radius: 6px;
+
+    border: 1px solid;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* Always BLUE */
+
+.edit-btn {
+    background: rgba(37, 99, 235, 0.10);
+
+    color: #2563eb;
+
+    border-color: rgba(37, 99, 235, 0.18);
+}
+
+
+.edit-btn:hover {
+    background: rgba(37, 99, 235, 0.18);
+}
+
+
+/* Always RED */
+
+.delete-btn {
+    background: rgba(220, 38, 38, 0.08);
+
+    color: #dc2626;
+
+    border-color: rgba(220, 38, 38, 0.16);
+}
+
+
+.delete-btn:hover {
+    background: rgba(220, 38, 38, 0.16);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 30px;
+
+    padding: 18px 3px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+
+        width: calc(100% - 220px);
+
+        padding: 30px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 15px;
+
+        flex-direction: row;
+
+        align-items: center;
+    }
+
+    .brand {
+        border: none;
+
+        padding: 0;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .sidebar-footer {
+        display: block;
+
+        margin-top: 0;
+
+        margin-left: auto;
+
+        padding: 0;
+
+        border-top: none;
+
+        width: auto;
+    }
+
+    .developer-credit {
+        justify-content: flex-end;
+
+        white-space: nowrap;
+    }
+
+    .app {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 25px 18px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #studentList {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 20px 14px;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .form-panel,
+    .students-panel {
+        padding: 17px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+.sidebar-footer {
+    margin-top: auto;
+    padding: 15px 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.developer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    line-height: 1;
+}
+
+.developer-name {
+    display: inline-block !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.developer-credit .star {
+    color: #fbbf24 !important;
+    font-size: 12px !important;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}

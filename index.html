@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">S</div>
+
+                <div>
+                    <h2>Student Manager</h2>
+                    <span>Management System</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <p class="nav-title">MENU</p>
+
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#addStudent" class="nav-item">
+                    <span class="nav-icon">＋</span>
+                    Add Student
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+				<div class="developer-credit">
+					<span class="star">★</span>
+					<span class="developer-name">Developed by Khan</span>
+				</div>
+			</div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Student Dashboard</h1>
+                </div>
+
+                <button
+                    id="themeBtn"
+                    class="theme-btn"
+                    title="Change theme"
+                    aria-label="Change theme">
+                    ☀
+                </button>
+
+            </header>
+
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-content">
+                        <span class="stat-label">
+                            Total Students
+                        </span>
+
+                        <strong id="studentCount">
+                            0
+                        </strong>
+                    </div>
+
+                    <div class="stat-icon">
+                        #
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-content">
+                        <span class="stat-label">
+                            System Status
+                        </span>
+
+                        <strong class="status-text">
+                            Active
+                        </strong>
+                    </div>
+
+                    <div class="status-indicator">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Main Grid -->
+            <section class="dashboard-grid">
+
+                <!-- Add Student -->
+                <div class="panel form-panel" id="addStudent">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Add Student</h2>
+
+                            <p>
+                                Enter student information below.
+                            </p>
+                        </div>
+
+                        <div class="panel-number">
+                            01
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter student name"
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mobile">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="Enter mobile number"
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            placeholder="Enter student address">
+                        </textarea>
+
+                    </div>
+
+
+                    <button id="addBtn" class="primary-btn">
+                        <span>＋</span>
+                        Add Student
+                    </button>
+
+                </div>
+
+
+                <!-- Students -->
+                <div class="panel students-panel">
+
+                    <div class="panel-header students-header">
+
+                        <div>
+                            <h2>All Students</h2>
+
+                            <p>
+                                View and manage registered students.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div id="studentList">
+                        <!-- Students generated by JavaScript -->
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+                <span>Student Manager</span>
+                <span>CRUD Application • JavaScript</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
